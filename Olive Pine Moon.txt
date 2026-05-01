@@ -52,14 +52,16 @@ Based upon original:
                   'Tide' by ElectricAlice             https://github.com/electricalice/Ao3-tide
                   'Flat Squares Skin' by milkfatzero  https://ao3-skins.dreamwidth.org/6156.html
 
-============================================================";
-}
+============================================================
+
+
 
 .NOTE_re_User_Icon ################ {
   content: "===================================================
       I have hardcoded it so that your user image will display next to the greeting icons by declaring greeting-icon-display to take flex.
       If you would rather not have your image there, then simply change flex to none.
       That is the very first thing that you see below in the root.
+      As well, txt-header: #4E6856 was simply too dark for general distro, so I upped it to #75D081 — if this is too bright, then you might want to change it to something in between these two values.
 ==============================================================";
 }
 
@@ -81,7 +83,7 @@ Based upon original:
   --shadow-buttons: 0 3px 8px 0 #c8b6ad33, 0 2px 0 0 #e7d3cb80;
   --shadow-box1: 0 8px 28px 0 #c8b6ad33, 0 4px 0 0 #e7d3cb80;
   --shadow-box2: 0 3px 10px 0 #c8b6ad22, 0 2px 0 0 #e7d3cb40;
-  --txt-header: #4E6856;
+  --txt-header: #75D081;
   --txt-header-hgl: var(--link-hgl);
   --txt-header-hgl-h1: linear-gradient(125deg, #bcebba, #6feb92);
   --txt-main: var(--txt-header);
