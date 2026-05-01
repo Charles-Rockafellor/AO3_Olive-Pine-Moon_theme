@@ -28,7 +28,7 @@ THIS FORK:
   - AO3:          https://archiveofourown.org/users/Charles_Rockafellor/collections
   - License:      MIT
 
-  - Repository:   TBD
+  - Repository:   https://github.com/Charles-Rockafellor/AO3_Olive-Pine-Moon_theme
   - Instructions: TBD
 
 
