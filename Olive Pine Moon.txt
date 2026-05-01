@@ -1,0 +1,242 @@
+.site-skin-metadata {
+  content: "
+==============================================================
+
+             ✦✦✦ Rosé Pine — Closer to Home ✦✦✦ 
+            Theme: Rosé Pine Moon - Closer to Home
+                        By ravenothere
+
+            FORK:        Olive Pine Moon
+            MOD BY       Charles_Rockafellor [https://archiveofourown.org/users/Charles_Rockafellor/collections]
+            MOD DATE     Mon 27 Apr 2026, 21:23 CDT
+            By request of u/fangedfaunn
+
+==============================================================
+SKIN METADATA
+==============================================================
+
+  - Skin:         Rosé Pine - Closer to Home
+  - Theme:        Rosé Pine Moon - Closer to Home
+  - File:         CTH_theme_rosepinemoon.css
+  - Author:       ravenothere
+  - Tumblr:       ravenothere
+  - License:      MIT
+  - Updated:      2026-04-27
+
+  - Repository:   https://github.com/ravenothere/AO3-Rose-Pine-Closer-to-Home
+  - Instructions: https://archiveofourown.org/works/80768621
+
+  - Original Skin:'Rosé Pine' by Blackbatcat          https://github.com/Wolfbatcat/ao3-rose-pine
+
+  - Base:         'neos' by ZerafinaCSS               https://archiveofourown.org/works/65849527
+
+  - Inspired by:  'Archive 2.0 skin' by AO3           https://archiveofourown.org/skins/873
+                  'Tide' by ElectricAlice             https://github.com/electricalice/Ao3-tide
+                  'Flat Squares Skin' by milkfatzero  https://ao3-skins.dreamwidth.org/6156.html
+
+============================================================";
+}
+
+:root {
+  --bg1: #0f1411;
+  --bg2: #1E2822;
+  --bg3: #2d3633;
+  --bg4: var(--bg5);
+  --bg5: var(--bg2);
+  --bg6: var(--bg5);
+  --bg7: var(--bg5);
+  --border1: #d3e7cb;
+  --border2: #d1e4c9;
+  --border3: var(--border2);
+  --border4: #BFD7B6;
+  --shadow: 0 0.2em 0.4em #89797925;
+  --shadow-header: 0 2px 8px 0 #c8b6ad33, 0 1px 0 0 rgba(200, 182, 173, 0.10);
+  --shadow-buttons: 0 3px 8px 0 #c8b6ad33, 0 2px 0 0 #e7d3cb80;
+  --shadow-box1: 0 8px 28px 0 #c8b6ad33, 0 4px 0 0 #e7d3cb80;
+  --shadow-box2: 0 3px 10px 0 #c8b6ad22, 0 2px 0 0 #e7d3cb40;
+  --txt-header: #4E6856;
+  --txt-header-hgl: var(--link-hgl);
+  --txt-header-hgl-h1: linear-gradient(125deg, #bcebba, #6feb92);
+  --txt-main: var(--txt-header);
+  --txt-alt1: #eeFFee;
+  --txt-alt2: #eeFFee;
+  --link: #6feb92;
+  --link-hgl: #6feb92;
+  --link-visited: #9cd8cf;
+  --int-btn-bg: #2e442c;
+  --int-btn-border: var(--border4);
+  --int-btn-txt: var(--txt-main);
+  --int-btn-hgl-bg: #4E6856;
+  --int-btn-hgl-txt: var(--txt-alt2);
+  --int-btn-hgl-border: #00110020;
+  --int-bg: var(--bg5);
+  --int-search: #283c25;
+  --int-current-bg: #344f30;
+  --int-current-txt: var(--txt-main);
+  --int-current-border: var(--tag-border);
+  --int-disabled-bg: var(--border1);
+  --int-checked: #eb6f92;
+  --int-hgl: var(--link-hgl);
+  --int-hgl-bg:  var(--int-btn-hgl-bg);
+  --int-hgl-txt: var(--txt-alt2);
+  --icon-content-complete: #badf95;
+  --icon-content-incomplete: #f995a6;
+  --icon-content-public: #3e8fb0;
+  --icon-content-private: #eb6f92;
+  --icon-content-hidden: #908caa;
+  --icon-content-rec: #f6c177;
+  --icon-rating-gen: #badf95;
+  --icon-rating-teen: #ffd07b;
+  --icon-rating-mature: #f2b487;
+  --icon-rating-explicit: #f995a6;
+  --icon-relationship-mm: #9bc9f6;
+  --icon-relationship-mf: #c27bc2;
+  --icon-relationship-gen: #badf95;
+  --icon-relationship-ff: #fa9eae;
+  --icon-multi: conic-gradient(from 360deg, #c27bc2 0% 25%, #9bc9f6 25% 50%, #badf95 50% 75%, #fa9eae 75% 100%);
+  --icon-relationship-other: linear-gradient(to left top, #c27bc2, #9bc9f6, #badf95, #fa9eae);
+  --icon-warning-choose-not: #f2b487;
+  --icon-warning-yes: #fa9cac;
+  --icon-content-external: #9dcaf8;
+  --icon-bg: var(--int-bg);
+  --icon-id: var(--link);
+  --icon-anon: var(--border4);
+  --icon-border1: var(--int-btn-hgl-border);
+  --icon-border2: var(--border2);
+  --tag-default-bg: #393757;
+  --tag-fandom-bg: #9fad97;
+  --tag-warning-bg: #dca65f;
+  --tag-ship-bg: #d36588;
+  --tag-platonic-ship-bg: #A88CC7;
+  --tag-character-bg: #73a7c0;
+  --tag-freeform-bg: var(--tag-default-bg);
+  --tag-splash-bg: var(--bg5);
+  --tag-default-txt: var(--txt-alt1);
+  --tag-fandom-txt: var(--txt-alt1);
+  --tag-warning-txt: var(--txt-alt1);
+  --tag-ship-txt: var(--txt-alt1);
+  --tag-platonic-ship-txt: var(--tag-ship-txt);
+  --tag-character-txt: var(--txt-alt1);
+  --tag-freeform-txt: var(--txt-alt1);
+  --tag-border: #9893a525;
+  --tag-hgl-bg: linear-gradient(135deg, #1E3826, #1E3826, #1E3826);
+  --tag-hgl-txt: var(--txt-alt2);
+  --tag-hsl-shadow: inset 0 0 0 1px rgba(255,255,255,0.3);
+  --notice-bg: #1a3026;
+  --success-bg: #162c2a;
+  --caution-bg: #2a3a20;
+  --alert-bg: #182a20;
+  --notice-txt: #9cd8cf;
+  --success-txt: #3eb08f;
+  --caution-txt: #c4e7a7;
+  --alert-txt: #6feb92;
+  --header-icon: brightness(0) saturate(100%) invert(31%) sepia(23%) saturate(756%) hue-rotate(128deg) brightness(98%) contrast(87%);
+  --header-icon-hgl: brightness(0) saturate(100%) invert(71%) sepia(22%) saturate(4960%) hue-rotate(70deg) brightness(94%) contrast(96%);
+  --kudos-icon: var(--header-icon);
+  --lock-icon: var(--header-icon);
+  --tag-filter: brightness(1.10);
+  --stats-icon: var(--header-icon);
+  --stat-chart: saturate(45%) hue-rotate(255deg) contrast(110%) sepia(10%) brightness(110%);
+  --rich-txt-editor: none;
+}
+
+li.relationships:has(a[href*="%20*a*%20"]) a.tag,
+[class^="relationship"] a[href*="%20*a*%20"],
+[class^="relationship"] a[href^="/tags/Other%20Relationship%20Tags%20to%20Be%20Added"] {
+  background-color: var(--tag-platonic-ship-bg) !important;
+  color: var(--tag-platonic-ship-txt) !important;
+}
+
+.freeforms a[href*='/tags/Alternate%20Universe'] {
+  background: #B4BDB3 !important;
+  color: #4E6856 !important;
+}
+
+a.tag:not(.fandom.index.group a.tag, h2.heading a.tag):is(:hover, :focus),
+.listbox .heading a.tag:visited:is(:hover, :focus),
+.tags a[data-remote="true"]:is(:hover, :focus) {
+  background: var(--tag-hgl-bg) !important;
+  background-origin: border-box !important;
+  border-color: transparent;
+  color: var(--tag-hgl-txt) !important;
+}
+
+.site-skin-metadata ################ {
+  content: "===================================================
+      FONTS
+          MAIN FONT FAMILY
+          HEADINGS FONT FAMILY
+          CODE FONT FAMILY
+              font-style: italic
+              for cursive version of Victor Mono
+          Works Font
+
+      If you do not have a given font installed on your device, then your device cannot display it on AO3 because AO3 does not embed fonts nor does it allow @ queries.
+          Apfel Grotezk (sans-serif)
+              https://www.collletttivo.it/typefaces/apfel-grotezk
+          Domine, Figtree (sans-serif), and Merriweather (serif)
+              https://fonts.google.com/specimen/Domine
+          Bitter
+              https://fonts.google.com/specimen/Bitter
+          Victor Mono Medium (monospace)
+              https://rubjo.github.io/victor-mono/
+
+==============================================================";
+}
+
+body,
+input,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+blockquote,
+.prompt .blurb h6,
+.bookmark .user .meta,
+a.work,
+span.symbol,
+.heading .actions,
+.heading .action,
+.heading span.actions,
+button,
+span.unread,
+.replied,
+span.claimed,
+.actions span.defaulted,
+.splash .news .meta,
+.datetime,
+h5.fandoms.heading a.tag,
+dd.fandom.tags a,
+select {
+  font-family: Apfel Grotezk, Figtree, Bitter, Helvetica, "Trebuchet MS", "Lucida Sans", Arial, sans-serif, "GNU Unifont";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-family: Apfel Grotezk Fett, Figtree, Bitter, Helvetica, "Trebuchet MS", "Lucida Sans", Arial, sans-serif, "GNU Unifont";
+  font-weight: var(--txt-bold);
+}
+
+kbd,
+tt,
+code,
+var,
+pre,
+samp,
+textarea,
+textarea#skin_css,
+.css.module blockquote pre,
+#floaty-textarea {
+  font-family: Victor Mono Medium, Consolas, Monaco, Courier, monospace;
+  font-size: 0.9em;
+}
+
+#workskin,
+.preface * {
+  font-family: Domine, Merriweather, serif;
+}
