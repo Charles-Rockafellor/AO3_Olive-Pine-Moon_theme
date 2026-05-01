@@ -2,22 +2,40 @@
   content: "
 ==============================================================
 
-             ✦✦✦ Rosé Pine — Closer to Home ✦✦✦ 
-            Theme: Rosé Pine Moon - Closer to Home
-                        By ravenothere
+                  Olive Pine Moon        
+                       Theme
+          At the request of u/fangedfaunn
 
-            FORK:        Olive Pine Moon
-            MOD BY       Charles_Rockafellor [https://archiveofourown.org/users/Charles_Rockafellor/collections]
-            MOD DATE     Mon 27 Apr 2026, 21:23 CDT
-            By request of u/fangedfaunn
+ FORK                  Olive Pine Moon
+ BY                    Charles_Rockafellor
+ MOD DATE              Mon 27 Apr 2026, 21:23 CDT
+ VERSION               Wed 29 Apr 2026, 20:05 CDT
+
+ FORK of               Rosé Pine Moon - Closer to Home
+                          By ravenothere
+ REQUIRES parent skin  Rosé Pine - Closer to Home
+                          By ravenothere
 
 ==============================================================
 SKIN METADATA
 ==============================================================
 
+THIS FORK:
+  - Theme:        Olive Pine Moon - Closer to Home
+  - File:         CTH_theme_OlivePineMoon.css
+  - Author:       Charles_Rockafellor
+  - GitHub:       https://github.com/Charles-Rockafellor
+  - AO3:          https://archiveofourown.org/users/Charles_Rockafellor/collections
+  - License:      MIT
+
+  - Repository:   TBD
+  - Instructions: TBD
+
+
+Based upon original:
   - Skin:         Rosé Pine - Closer to Home
   - Theme:        Rosé Pine Moon - Closer to Home
-  - File:         CTH_theme_rosepinemoon.css
+  - File:         CTH_theme_OlivePineMoon.css
   - Author:       ravenothere
   - Tumblr:       ravenothere
   - License:      MIT
@@ -37,7 +55,16 @@ SKIN METADATA
 ============================================================";
 }
 
+.NOTE_re_User_Icon ################ {
+  content: "===================================================
+      I have hardcoded it so that your user image will display next to the greeting icons by declaring greeting-icon-display to take flex.
+      If you would rather not have your image there, then simply change flex to none.
+      That is the very first thing that you see below in the root.
+==============================================================";
+}
+
 :root {
+  --greeting-icon-display: flex;
   --bg1: #0f1411;
   --bg2: #1E2822;
   --bg3: #2d3633;
@@ -140,6 +167,14 @@ SKIN METADATA
   --rich-txt-editor: none;
 }
 
+.NOTE_re_Platonic_Relationships ################ {
+  content: "===================================================
+      This rule looks at relationship tags to see if they are platonic, overriding the Rosé Pine Moon theme generic relationship umbrella.
+      This is only necessary if you wish to differentiate tag background color (highlighting) when platonic rather than romantic.
+      It was not part of the Rosé Pine Moon theme by ravenothere, coming instead from the BASE Rosé Pine SKIN by Blackbatcat.
+==============================================================";
+}
+
 li.relationships:has(a[href*="%20*a*%20"]) a.tag,
 [class^="relationship"] a[href*="%20*a*%20"],
 [class^="relationship"] a[href^="/tags/Other%20Relationship%20Tags%20to%20Be%20Added"] {
@@ -147,9 +182,24 @@ li.relationships:has(a[href*="%20*a*%20"]) a.tag,
   color: var(--tag-platonic-ship-txt) !important;
 }
 
-.freeforms a[href*='/tags/Alternate%20Universe'] {
+.NOTE_re_Alternate_Universe_tag ################ {
+  content: "===================================================
+      This rule at any tag for Alternate Universe (AU, A.U., and Alternative Universe will bring up the same results, per https://archiveofourown.org/tags/Alternate%20Universe, with the canon tag being show instead of the ).
+      This is only necessary if you wish to differentiate such the background color (highlighting) for such a tag, as was the case in the example image from the Redditor who inspired this theme.
+      It happens to be tag ID 968, for the curious.
+      It was not part of any other theme.
+==============================================================";
+}
+
+.freeforms a[href*='Alternate%20Universe'] {
   background: #B4BDB3 !important;
   color: #4E6856 !important;
+}
+
+.NOTE_re_Hovered_Tags ################ {
+  content: "===================================================
+      This rule turns hovered and focused tags to white text on a hunter green background.
+==============================================================";
 }
 
 a.tag:not(.fandom.index.group a.tag, h2.heading a.tag):is(:hover, :focus),
@@ -161,7 +211,7 @@ a.tag:not(.fandom.index.group a.tag, h2.heading a.tag):is(:hover, :focus),
   color: var(--tag-hgl-txt) !important;
 }
 
-.site-skin-metadata ################ {
+.NOTE_re_Fonts ################ {
   content: "===================================================
       FONTS
           MAIN FONT FAMILY
@@ -172,6 +222,7 @@ a.tag:not(.fandom.index.group a.tag, h2.heading a.tag):is(:hover, :focus),
           Works Font
 
       If you do not have a given font installed on your device, then your device cannot display it on AO3 because AO3 does not embed fonts nor does it allow @ queries.
+      Text to be displayed in a font that your device does not have will still be displayed using some default fallback.
           Apfel Grotezk (sans-serif)
               https://www.collletttivo.it/typefaces/apfel-grotezk
           Domine, Figtree (sans-serif), and Merriweather (serif)
@@ -180,6 +231,12 @@ a.tag:not(.fandom.index.group a.tag, h2.heading a.tag):is(:hover, :focus),
               https://fonts.google.com/specimen/Bitter
           Victor Mono Medium (monospace)
               https://rubjo.github.io/victor-mono/
+
+      If you face the struggle of fonts on a cell phone, then ravenothere has 3 solutions:
+        — 1 Uses the Stylus browser extension to get the font files named above
+        — 2 Permits you to grab other fonts from GitHub
+        — 3 Uses the Fontonic browser extension to load certain fonts, though apparently slowly with a limited selection
+        — All three are explained and linked at https://archiveofourown.org/works/80873616#:~:text=s%20skin%20system.-,Custom%20Fonts%20for%20Mobile,-%E2%86%91
 
 ==============================================================";
 }
