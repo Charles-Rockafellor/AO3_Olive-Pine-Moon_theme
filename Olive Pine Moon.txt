@@ -9,7 +9,7 @@
  FORK                  Olive Pine Moon
  BY                    Charles_Rockafellor
  MOD DATE              Mon 27 Apr 2026, 21:23 CDT
- VERSION               Wed 29 Apr 2026, 20:05 CDT
+ VERSION               Fri 01 May 2026, 00:59 CDT
 
  FORK of               Rosé Pine Moon - Closer to Home
                           By ravenothere
@@ -191,7 +191,8 @@ li.relationships:has(a[href*="%20*a*%20"]) a.tag,
 ==============================================================";
 }
 
-.freeforms a[href*='Alternate%20Universe'] {
+.freeforms a[href*='Alternate%20Universe'],
+dd.freeform.tags a[href*='Alternate%20Universe']  {
   background: #B4BDB3 !important;
   color: #4E6856 !important;
 }
